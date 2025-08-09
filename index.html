@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Cidades Inteligentes e Desenvolvimento Urbano Sustentável</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div id="slideContainer" class="slide-container">
+        <!-- HEADER FIXO (SEMPRE PRESENTE) -->
+        <div id="header1">
+            <div class="flex justify-between items-center">
+                <!-- Logo Estácio Oficial -->
+                <div class="flex items-center">
+                    <div id="logo1" class="relative logo-hover">
+                        <img 
+                            src="./estacio-logo.png" 
+                            alt="Logo Estácio" 
+                            class="w-full h-full object-contain"
+                        />
+                    </div>
+                </div>
+                
+                <!-- Slogan -->
+                <div id="slogan1" class="text-right">
+                    <div class="font-bold">
+                        <span class="text-blue-900">EDUCAR</span>
+                        <span class="text-teal-400 ml-2">PARA</span>
+                    </div>
+                    <div class="font-bold">
+                        <span class="text-teal-400">TRANS</span>
+                        <span class="text-blue-900">FORMAR</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Linha divisória -->
+            <div id="divider1" class="w-full bg-gradient-to-r from-blue-600 via-teal-500 to-teal-300"></div>
+        </div>
+
+        <!-- ÁREA DE CONTEÚDO DINÂMICO -->
+        <div class="flex-1" id="dynamicContent">
+            <!-- Conteúdo do slide será inserido aqui dinamicamente -->
+        </div>
+        
+        <!-- FOOTER FIXO (SEMPRE PRESENTE) -->
+        <div id="footer1" class="relative overflow-hidden">
+            <!-- Padrão geométrico animado -->
+            <div class="absolute inset-0 flex items-center justify-center geometric-pattern">
+                <div id="shape1-1" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-2" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-3" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-4" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-5" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-6" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-7" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-8" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-9" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+                <div id="shape1-10" class="w-8 h-8 bg-white bg-opacity-10 transform rotate-45 mx-1"></div>
+            </div>
+            
+            <!-- Elementos geométricos adicionais -->
+            <div class="absolute left-8 top-4">
+                <div id="left-geo1" class="w-6 h-6 bg-teal-200 transform rotate-45"></div>
+            </div>
+            <div class="absolute right-8 top-4">
+                <div id="right-geo1" class="w-8 h-8 border-2 border-white border-opacity-60 transform rotate-45"></div>
+            </div>
+            
+            <!-- Controles de navegação -->
+            <div class="absolute bottom-2 right-8 flex items-center gap-4 z-10">
+                <span class="text-white font-semibold">
+                    Slide <span id="currentSlide">1</span> de <span id="totalSlides">4</span>
+                </span>
+                <button onclick="previousSlide()" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-3 py-1 rounded transition-all">
+                    ←
+                </button>
+                <button onclick="nextSlide()" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-3 py-1 rounded transition-all">
+                    →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts na ordem correta -->
+    <script src="js/slides-data.js"></script>
+    <script src="js/slide-interactivity.js"></script>
+    <script src="js/slide-manager.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

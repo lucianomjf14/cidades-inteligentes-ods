@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Dissertação</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="slide-wrapper">
+        <!-- CABEÇALHO PADRÃO (Idêntico em todos os slides) -->
+        <header class="slide-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <!-- Adicione aqui logos/imagens do cabeçalho original -->
+                    <img src="assets/logo.png" alt="Logo" class="header-logo">
+                </div>
+                <div class="title-section">
+                    <h1 class="presentation-title">TÍTULO DA DISSERTAÇÃO</h1>
+                    <p class="presentation-subtitle">Subtítulo ou Informação Complementar</p>
+                </div>
+                <div class="info-section">
+                    <span class="author">Autor: Nome Completo</span>
+                    <span class="institution">Instituição - 2025</span>
+                </div>
+            </div>
+            <!-- Animações do cabeçalho -->
+            <div class="header-animation">
+                <span class="animated-line"></span>
+            </div>
+        </header>
+
+        <!-- ÁREA DE CONTEÚDO EDITÁVEL -->
+        <main class="slide-content" id="content-area">
+            <!-- CONTEÚDO DINÂMICO SERÁ INSERIDO AQUI -->
+        </main>
+
+        <!-- RODAPÉ PADRÃO (Idêntico em todos os slides) -->
+        <footer class="slide-footer">
+            <div class="footer-animation">
+                <span class="animated-line"></span>
+            </div>
+            <div class="footer-content">
+                <div class="navigation-info">
+                    <span class="slide-counter">
+                        Slide <span id="current">1</span> de <span id="total">15</span>
+                    </span>
+                </div>
+                <div class="navigation-controls">
+                    <button class="nav-btn prev" id="btnPrev" onclick="previousSlide()">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                        Anterior
+                    </button>
+                    <button class="nav-btn next" id="btnNext" onclick="nextSlide()">
+                        Próximo
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="footer-info">
+                    <span class="date">Data da Apresentação</span>
+                    <span class="location">Local/Evento</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/slide-controller.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

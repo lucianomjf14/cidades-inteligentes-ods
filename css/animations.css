@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* ===== ANIMAÇÕES EXISTENTES ===== */
+@keyframes fadeInDown {
+    from { 
+        opacity: 0; 
+        transform: translateY(-50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+@keyframes fadeOut {
+    from { 
+        opacity: 1; 
+    }
+    to { 
+        opacity: 0; 
+    }
+}
+
+@keyframes bounceIn {
+    0% { 
+        opacity: 0; 
+        transform: scale(0) rotate(0deg); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.1) rotate(22.5deg); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) rotate(45deg); 
+    }
+}
+
+@keyframes continuousRotation {
+    from { 
+        transform: rotate(45deg); 
+    }
+    to { 
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes slowRotation {
+    from { 
+        transform: rotate(45deg); 
+    }
+    to { 
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== NOVAS ANIMAÇÕES PARA SLIDE 4 ===== */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes expandIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* ===== CLASSES DE ANIMAÇÃO ===== */
+.hidden-initially {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animated {
+    animation-fill-mode: both;
+}
+
+.logo-hover:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.geometric-pattern div {
+    transition: all 0.3s ease;
+    animation-duration: 6s;
+}
+
+.geometric-pattern div:hover {
+    transform: rotate(90deg) scale(1.2) !important;
+}
+
+.rotating-square {
+    animation: continuousRotation 4s linear infinite;
+}
+
+.slow-rotating {
+    animation: slowRotation 6s ease-in-out infinite alternate;
+}
+
+/* Animações para elementos de conteúdo */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 0.8s ease-out forwards;
+}
+
+.zoom-out {
+    animation: zoomOut 0.5s ease-out forwards;
+}
+
+/* Animação de pulso para indicador */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
