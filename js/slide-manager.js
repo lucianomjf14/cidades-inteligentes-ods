@@ -66,7 +66,7 @@ function animateElement(elementId, animation, delay = 0) {
 // Atalhos de teclado
 document.addEventListener('keydown', (e) => {
     // Desabilitar navegação por teclado durante interatividade do slide 4
-    if (currentSlideIndex === 3 && slide4Stage < 2 && (e.key === 'ArrowRight' || e.key === ' ')) {
+    if (currentSlideIndex === 3 && slide4Stage < 6 && (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter')) {
         e.preventDefault();
         handleSlide4Click();
         return;
@@ -75,6 +75,7 @@ document.addEventListener('keydown', (e) => {
     switch(e.key) {
         case 'ArrowRight':
         case ' ':
+        case 'Enter':
             e.preventDefault();
             nextSlide();
             break;

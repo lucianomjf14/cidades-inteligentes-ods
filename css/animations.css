@@ -221,3 +221,84 @@
 .animate-pulse {
     animation: pulse 2s ease-in-out infinite;
 }
+
+/* ===== ANIMAÇÕES DE TEMPERATURA PARA GLOBO ===== */
+
+/* Pulsação sutil e elegante dos anéis de calor */
+@keyframes subtleHeatPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+        filter: blur(1px) brightness(1);
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 0.9;
+        filter: blur(1.5px) brightness(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+        filter: blur(1px) brightness(1);
+    }
+}
+
+/* Ondulação atmosférica muito sutil */
+@keyframes subtleAtmosphericGlow {
+    0% {
+        opacity: 0.3;
+        filter: blur(2px) brightness(1);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(3px) brightness(1.05);
+    }
+    100% {
+        opacity: 0.3;
+        filter: blur(2px) brightness(1);
+    }
+}
+
+/* Partículas de calor flutuantes sutis */
+@keyframes subtleParticleFloat {
+    0% {
+        transform: translateY(0px) scale(0.9);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-4px) scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0px) scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+/* Classes para ativar animações sutis de temperatura */
+.heat-ring-outer {
+    animation: subtleHeatPulse 4s ease-in-out infinite;
+}
+
+.heat-ring-middle {
+    animation: subtleHeatPulse 3.8s ease-in-out infinite 0.5s;
+}
+
+.heat-ring-inner {
+    animation: subtleHeatPulse 3.5s ease-in-out infinite 1s;
+}
+
+.atmospheric-heat {
+    animation: subtleAtmosphericGlow 5s ease-in-out infinite;
+}
+
+.heat-particle {
+    animation: subtleParticleFloat 3s ease-in-out infinite;
+}
+
+.heat-particle:nth-child(1) { animation-delay: 0s; }
+.heat-particle:nth-child(2) { animation-delay: 0.5s; }
+.heat-particle:nth-child(3) { animation-delay: 1s; }
+.heat-particle:nth-child(4) { animation-delay: 1.5s; }
+.heat-particle:nth-child(5) { animation-delay: 2s; }
+.heat-particle:nth-child(6) { animation-delay: 2.5s; }

@@ -140,12 +140,12 @@ const SLIDES_DATA = [
     },
 {
     id: 4,
-    title: "Urbanização e Crescimento",
+    title: "Contextualização e Justificativa",
     content: `
         <!-- Título do Slide -->
         <div id="slide4-title" class="text-center mb-8 hidden-initially">
             <h1 class="text-3xl font-bold text-gray-900">
-                CIDADES INTELIGENTES COMO VETORES PARA O DESENVOLVIMENTO URBANO SUSTENTÁVEL
+                CONTEXTUALIZAÇÃO E JUSTIFICATIVA: CRESCIMENTO POPULACIONAL E URBANIZAÇÃO NO SÉCULO XXI
             </h1>
         </div>
 
@@ -178,55 +178,46 @@ const SLIDES_DATA = [
                         <p class="text-sm text-gray-600">Fonte: ONU-Habitat</p>
                     </div>
                     
-                    <!-- Container do gráfico circular -->
-                    <div class="flex items-center justify-center gap-12">
-                            <!-- Gráfico Circular -->
+                    <!-- Container do gráfico circular - Layout melhorado -->
+                    <div class="flex flex-col items-center justify-center gap-8">
+                        <!-- Gráfico Circular - Aumentado -->
                         <div class="relative">
-                            <svg width="300" height="300" viewBox="0 0 300 300">
-                                    <!-- Círculo de fundo -->
-                                    <circle cx="150" cy="150" r="120" fill="none" stroke="#e5e7eb" stroke-width="40"/>
-                                    <!-- Círculo de progresso para 2024 (55%) -->
-                                    <circle id="progress-2024" cx="150" cy="150" r="120" fill="none" 
-                                            stroke="url(#gradient2024)" stroke-width="40"
-                                            stroke-dasharray="0 754"
-                                            stroke-dashoffset="188.5"
-                                            transform="rotate(-90 150 150)"
-                                            class="transition-all duration-1000 ease-out"/>
-                                    <!-- Círculo de progresso para 2050 (68%) - inicialmente oculto -->
-                                    <circle id="progress-2050" cx="150" cy="150" r="120" fill="none" 
-                                            stroke="url(#gradient2050)" stroke-width="40"
-                                            stroke-dasharray="0 754"
-                                            stroke-dashoffset="188.5"
-                                            transform="rotate(-90 150 150)"
-                                            class="transition-all duration-1000 ease-out opacity-0"/>
-                                    <!-- Gradientes -->
+                            <svg width="420" height="420" viewBox="0 0 420 420" class="drop-shadow-lg">
+                                <!-- Círculo de fundo -->
+                                <circle cx="210" cy="210" r="160" fill="none" stroke="#e5e7eb" stroke-width="50"/>
+                                <!-- Círculo de progresso (55% -> 68%) -->
+                                <circle id="progress-2024" cx="210" cy="210" r="160" fill="none" 
+                                        stroke="url(#gradient2024)" stroke-width="50"
+                                        stroke-dasharray="0 1005.31"
+                                        stroke-dashoffset="251.33"
+                                        transform="rotate(-90 210 210)"
+                                        class="transition-all duration-1000 ease-out"/>
+                                <!-- Gradientes -->
                                 <defs>
-                                        <linearGradient id="gradient2024" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#3b82f6"/>
-                                            <stop offset="100%" stop-color="#14b8a6"/>
-                                        </linearGradient>
-                                        <linearGradient id="gradient2050" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#14b8a6"/>
-                                            <stop offset="100%" stop-color="#06b6d4"/>
+                                    <!-- Gradiente que muda de azul/teal (55%) para vermelho sutil (68% - urgência) -->
+                                    <linearGradient id="gradient2024" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3b82f6"/>
+                                        <stop offset="100%" stop-color="#14b8a6"/>
                                     </linearGradient>
                                 </defs>
                             </svg>
-                                <!-- Texto central -->
+                            <!-- Texto central - Aumentado -->
                             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                    <div id="year-label" class="text-3xl font-bold text-gray-800">2024</div>
-                                    <div id="percentage-label" class="text-5xl font-bold text-blue-600">55%</div>
-                                </div>
+                                <div id="year-label" class="text-4xl font-bold text-gray-800 mb-2">2024</div>
+                                <div id="percentage-label" class="text-7xl font-bold text-blue-600">0%</div>
+                                <div class="text-lg text-gray-600 mt-2 font-medium">População Urbana</div>
+                            </div>
                         </div>
                         
-                            <!-- Legenda -->
-                        <div class="space-y-4">
+                        <!-- Legenda - Reorganizada -->
+                        <div class="flex items-center justify-center gap-8">
                             <div class="flex items-center gap-3">
-                                <div class="w-4 h-4 bg-gradient-to-r from-blue-600 to-teal-600 rounded"></div>
-                                <span class="text-gray-700">População urbana</span>
+                                <div class="w-5 h-5 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full shadow-sm"></div>
+                                <span class="text-gray-700 font-medium text-lg">População urbana</span>
                             </div>
                             <div class="flex items-center gap-3">
-                                <div class="w-4 h-4 bg-gray-200 rounded"></div>
-                                <span class="text-gray-700">População rural</span>
+                                <div class="w-5 h-5 bg-gray-200 rounded-full shadow-sm"></div>
+                                <span class="text-gray-700 font-medium text-lg">População rural</span>
                             </div>
                         </div>
                     </div>
@@ -234,11 +225,105 @@ const SLIDES_DATA = [
             </div>
 
             <!-- Etapa 3: Informação adicional 2050 -->
-            <div id="stage3-info" class="absolute bottom-8 left-0 right-0 opacity-0 pointer-events-none">
-                <div class="text-center transform scale-0 transition-all duration-500" id="billion-info">
-                    <div class="inline-block bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-2xl shadow-2xl">
-                        <span class="text-4xl font-bold">+2,5 BILHÕES</span>
-                        <span class="text-2xl ml-3">de pessoas até 2050</span>
+            <div id="stage3-info" class="absolute bottom-8 left-0 right-0 opacity-0 pointer-events-none transition-opacity duration-1000 ease-out">
+                <div class="text-center transform scale-95 transition-all duration-1000 ease-out" id="billion-info">
+                    <div class="inline-block bg-gradient-to-r from-red-500/80 to-red-600/80 backdrop-blur-sm text-white px-8 py-6 rounded-2xl shadow-lg border border-red-400/20">
+                        <div class="flex items-center justify-center gap-2">
+                            <span class="text-2xl font-bold opacity-90">+</span>
+                            <span id="billion-counter" class="text-4xl font-bold tabular-nums opacity-95">0</span>
+                        </div>
+                        <div class="text-lg mt-1 font-medium opacity-85">pessoas até 2050</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Etapa 4: Globo 3D (mais centralizado) -->
+            <div id="stage4-globe-container" class="absolute right-0 top-0 w-3/5 h-full opacity-0 pointer-events-none transition-all duration-1200 ease-out">
+                <div id="globe-3d" class="w-full h-full"></div>
+                
+                <!-- Overlay de temperatura para projeção 2040 (acima do globo) -->
+                <div id="temperature-overlay" class="absolute inset-0 opacity-0 pointer-events-none transition-all duration-1000 ease-out z-10">
+                    <!-- Múltiplos anéis de calor concêntricos que seguem o globo -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <!-- Anel externo - mais intenso -->
+                        <div class="absolute w-full h-full rounded-full border-4 border-red-500/60 shadow-lg" 
+                             style="filter: blur(2px); box-shadow: 0 0 20px rgba(239, 68, 68, 0.8), inset 0 0 20px rgba(239, 68, 68, 0.3);"></div>
+                        
+                        <!-- Anel médio -->
+                        <div class="absolute w-5/6 h-5/6 rounded-full border-3 border-orange-400/70" 
+                             style="filter: blur(1px); box-shadow: 0 0 15px rgba(251, 146, 60, 0.7), inset 0 0 15px rgba(251, 146, 60, 0.2);"></div>
+                        
+                        <!-- Anel interno -->
+                        <div class="absolute w-4/5 h-4/5 rounded-full border-2 border-yellow-300/50" 
+                             style="filter: blur(0.5px); box-shadow: 0 0 10px rgba(253, 224, 71, 0.6), inset 0 0 10px rgba(253, 224, 71, 0.1);"></div>
+                    </div>
+                    
+                    <!-- Gradiente de calor atmosférico -->
+                    <div class="absolute inset-0 rounded-full opacity-40" 
+                         style="background: radial-gradient(circle at center, transparent 35%, rgba(239, 68, 68, 0.15) 45%, rgba(220, 38, 38, 0.25) 65%, rgba(185, 28, 28, 0.35) 85%, rgba(153, 27, 27, 0.45) 95%);
+                                filter: blur(3px);"></div>
+                    
+                    <!-- Partículas de calor flutuantes -->
+                    <div class="absolute inset-0">
+                        <div class="heat-particle absolute w-1 h-1 bg-red-400 rounded-full opacity-70" style="top: 20%; left: 30%;"></div>
+                        <div class="heat-particle absolute w-1 h-1 bg-orange-400 rounded-full opacity-60" style="top: 40%; left: 70%;"></div>
+                        <div class="heat-particle absolute w-1 h-1 bg-red-300 rounded-full opacity-80" style="top: 60%; left: 20%;"></div>
+                        <div class="heat-particle absolute w-1 h-1 bg-orange-300 rounded-full opacity-50" style="top: 80%; left: 80%;"></div>
+                        <div class="heat-particle absolute w-1 h-1 bg-red-500 rounded-full opacity-75" style="top: 30%; left: 60%;"></div>
+                        <div class="heat-particle absolute w-1 h-1 bg-orange-500 rounded-full opacity-65" style="top: 70%; left: 40%;"></div>
+                    </div>
+                </div>
+                
+                <!-- Tooltip da Índia -->
+                <div id="india-tooltip" class="absolute top-20 left-8 bg-blue-900/85 backdrop-blur-md text-white p-4 rounded-lg shadow-xl opacity-0 transform scale-90 transition-all duration-500 ease-out max-w-xs">
+                    
+                    <div class="flex items-center gap-3 mb-3">
+                        <!-- Bandeira da Índia -->
+                        <div class="w-8 h-6 rounded shadow-md overflow-hidden flex flex-col">
+                            <div class="h-1/3 bg-orange-500"></div>
+                            <div class="h-1/3 bg-white flex items-center justify-center">
+                                <div class="w-1 h-1 border border-blue-800 rounded-full"></div>
+                            </div>
+                            <div class="h-1/3 bg-green-600"></div>
+                        </div>
+                        <h3 class="font-bold text-lg">Mumbai, Índia</h3>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-bold text-xl text-blue-300">944mm</span> de chuva em 24h (2005)</p>
+                        <p class="text-blue-200">Enchentes devastadoras em área urbana densa</p>
+                    </div>
+                </div>
+                
+                <!-- Tooltip da França -->
+                <div id="france-tooltip" class="absolute top-20 left-8 bg-red-900/85 backdrop-blur-md text-white p-4 rounded-lg shadow-xl opacity-0 transform scale-90 transition-all duration-500 ease-out max-w-xs">
+                    
+                    <div class="flex items-center gap-3 mb-3">
+                        <!-- Bandeira da França -->
+                        <div class="w-8 h-6 rounded shadow-md overflow-hidden flex">
+                            <div class="w-1/3 bg-blue-700"></div>
+                            <div class="w-1/3 bg-white"></div>
+                            <div class="w-1/3 bg-red-600"></div>
+                        </div>
+                        <h3 class="font-bold text-lg">França</h3>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-bold text-xl text-red-300">14.800</span> mortes (2003)</p>
+                        <p class="text-red-200">Onda de calor - excesso de mortalidade de 142%</p>
+                    </div>
+                </div>
+                
+                <!-- Tooltip da Projeção Global -->
+                <div id="global-tooltip" class="absolute bottom-20 left-8 bg-orange-900/85 backdrop-blur-md text-white p-4 rounded-lg shadow-xl opacity-0 transform scale-90 transition-all duration-500 ease-out max-w-xs">
+                    
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-md">
+                            <div class="text-xs font-bold text-orange-100">2040</div>
+                        </div>
+                        <h3 class="font-bold text-lg">Projeção 2040</h3>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-bold text-xl text-orange-300">+2 bilhões</span> de pessoas urbanas</p>
+                        <p class="text-orange-200">Expostas a aumentos de temperatura >0,5°C</p>
                     </div>
                 </div>
             </div>
