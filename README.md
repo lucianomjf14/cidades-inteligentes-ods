@@ -12,6 +12,17 @@ Apresentação acadêmica interativa que explora como as Cidades Inteligentes po
 
 ---
 
+## Da pesquisa ao produto visual
+
+```mermaid
+flowchart LR
+    A["RSL\nRevisão Sistemática"] --> B["Dados\nUrbanização + ODS"]
+    B --> C["Visualização\nGlobo 3D + Gráficos"]
+    C --> D["Apresentação\nInterativa e navegável"]
+```
+
+---
+
 ## Conteudo da Apresentacao
 
 | Slide | Titulo | Destaques |
