@@ -8,7 +8,7 @@
 
 Apresentação acadêmica interativa que explora como as Cidades Inteligentes podem funcionar como vetores para o alcance dos Objetivos de Desenvolvimento Sustentável (ODS) da ONU, baseada em uma Revisão Sistemática da Literatura (RSL).
 
-**Titulo completo:** Cidades Inteligentes como Vetores para os ODS: Sinergias, Desafios e Oportunidades para o Desenvolvimento Urbano Sustentável atraves de uma RSL
+**Título completo:** Cidades Inteligentes como Vetores para os ODS: Sinergias, Desafios e Oportunidades para o Desenvolvimento Urbano Sustentável através de uma RSL
 
 ---
 
@@ -23,25 +23,25 @@ flowchart LR
 
 ---
 
-## Conteudo da Apresentacao
+## Conteúdo da Apresentação
 
-| Slide | Titulo | Destaques |
+| Slide | Título | Destaques |
 |-------|--------|----------|
-| 1 | Capa | Identificacao do trabalho, banca examinadora |
-| 2 | Resumo da Apresentacao | Introducao, Referencial Teorico, Metodologia (RSL), Resultados, Discussao |
+| 1 | Capa | Identificação do trabalho, banca examinadora |
+| 2 | Resumo da Apresentação | Introdução, Referencial Teórico, Metodologia (RSL), Resultados, Discussão |
 | 3 | Pergunta Central | Por que pesquisar Cidades Inteligentes e os ODS? |
-| 4 | Contextualizacao e Justificativa | Dados de urbanizacao, projecoes demograficas, impactos climaticos |
+| 4 | Contextualização e Justificativa | Dados de urbanização, projeções demográficas, impactos climáticos |
 
 ---
 
 ## Recursos Interativos
 
 - Globo 3D interativo (Globe.gl) com dados georreferenciados
-- Grafico circular animado de urbanizacao (55% para 68% ate 2050)
-- Projecao de +2 bilhoes de habitantes urbanos ate 2050
-- Tooltips com dados reais (Mumbai 944mm de chuva em 2005, Franca 14.800 mortes em 2003)
-- Overlay de temperatura com projecao para 2040
-- Animacoes CSS customizadas (fadeInUp, slideInLeft, zoomIn)
+- Gráfico circular animado de urbanização (55% para 68% até 2050)
+- Projeção de +2 bilhões de habitantes urbanos até 2050
+- Tooltips com dados reais (Mumbai 944mm de chuva em 2005, França 14.800 mortes em 2003)
+- Overlay de temperatura com projeção para 2040
+- Animações CSS customizadas (fadeInUp, slideInLeft, zoomIn)
 
 ---
 
@@ -49,16 +49,16 @@ flowchart LR
 
 | Tecnologia | Uso |
 |------------|-----|
-| HTML5 / CSS3 | Estrutura e estilizacao |
-| JavaScript | Logica, animacoes e interatividade |
-| TailwindCSS | Framework de estilos utilitarios |
-| Globe.gl | Visualizacao 3D do globo terrestre |
+| HTML5 / CSS3 | Estrutura e estilização |
+| JavaScript | Lógica, animações e interatividade |
+| TailwindCSS | Framework de estilos utilitários |
+| Globe.gl | Visualização 3D do globo terrestre |
 
 ---
 
 ## Como Executar
 
-Por ser uma aplicacao estatica (HTML/CSS/JS), basta abrir o arquivo `index.html` em qualquer navegador moderno.
+Por ser uma aplicação estática (HTML/CSS/JS), basta abrir o arquivo `index.html` em qualquer navegador moderno.
 
 ```
 git clone https://github.com/lucianomjf14/cidades-inteligentes-ods.git
@@ -95,22 +95,22 @@ cidades-inteligentes-ods/
 
 ---
 
-## Informacoes Academicas
+## Informações Acadêmicas
 
 | Campo | Detalhe |
 |-------|--------|
-| **Programa** | Mestrado em Administracao e Desenvolvimento Empresarial (MADE) |
-| **Instituicao** | Universidade Estacio de Sa |
+| **Programa** | Mestrado em Administração e Desenvolvimento Empresarial (MADE) |
+| **Instituição** | Universidade Estácio de Sá |
 | **Mestrando** | Luciano Marinho Silveira |
-| **Orientador** | Prof. Dr. Jose Aires Trigo |
-| **Avaliador** | Prof. Dr. Antonio Augusto Goncalves |
+| **Orientador** | Prof. Dr. José Aires Trigo |
+| **Avaliador** | Prof. Dr. Antonio Augusto Gonçalves |
 | **Local** | Rio de Janeiro, 2025 |
 
 ---
 
-## Licenca
+## Licença
 
-Este projeto esta licenciado sob a [Licenca MIT](LICENSE).
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ---
 
